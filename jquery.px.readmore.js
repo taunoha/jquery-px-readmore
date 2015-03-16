@@ -28,7 +28,7 @@
 
         return this.each(function() {
             var $el = $(this);
-            var token = 'oi-' + Math.random().toString(36).substr(2);
+            var token = 'px-' + Math.random().toString(36).substr(2);
 
             if ($el.height() < settings.maxHeight)
                 return;

@@ -8,3 +8,14 @@ Just another jQuery Readmore plugin.
 ...
 </article>
 ```
+### Events
+```js
+$(document).on('closed.px.readmore', function(e) {
+  var $this = $(e.relatedTarget); // Toggle button element
+});
+
+$(document).on('open.px.readmore', function(e) {
+  var $this = $(e.relatedTarget); // Toggle button element
+});
+
+```

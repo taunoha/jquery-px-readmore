@@ -16,13 +16,19 @@
             var $con = $this.closest('[data-readmore]');
 
             if ($con.hasClass('open')) {
-                $con.removeClass('open').attr('aria-expanded', false);;
+
+                $con.removeClass('open').attr('aria-expanded', false);
                 $this.text($con.data('readmore'));
+
+                $this.trigger(e = $.Event('closed.px.readmore', { relatedTarget: this }));
+
                 return;
             }
 
             $con.addClass('open').attr('aria-expanded', true);
             $this.text($con.data('readmore-less'));
+
+            $this.trigger(e = $.Event('open.px.readmore', { relatedTarget: this } ));
 
         };
 

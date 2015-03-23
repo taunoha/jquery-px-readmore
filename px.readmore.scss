@@ -31,3 +31,10 @@
         box-shadow: none;
     }
 }
+
+.px-readmore-was-open,
+.px-readmore-is-open {
+    position: relative;
+    box-shadow: 0 0 2px rgba(#66afe9, .95);
+    z-index: 1;
+}

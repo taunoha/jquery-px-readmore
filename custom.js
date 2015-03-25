@@ -5,9 +5,9 @@ jQuery(function($) {
       var $helper = $self.parent().prev();
 
       if( e.type == 'open' ) {
-          $helper.animate({height: $helper.parent().data('px-readmore-max')}, 250);
+          $helper.animate({height: $helper.parent().data('readmore-content-height')}, 250);
       } else {
-          $helper.animate({height: 200}, 250);
+          $helper.animate({height: $helper.parent().data('readmore-max-height')}, 250);
       }
   };
   $(document).on('open.px.readmore', readmoreHandler);

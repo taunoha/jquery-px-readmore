@@ -1,4 +1,4 @@
-(function($) {
+;(function($) {
 
     $.fn.readmore = function(options) {
 
@@ -35,13 +35,15 @@
         return this.each(function() {
             var $el = $(this);
             var token = 'px-' + Math.random().toString(36).substr(2);
+            var conHeight = $el.height();
 
-            if ($el.height() < settings.maxHeight)
+            if (conHeight < settings.maxHeight)
                 return;
 
-            $el.addClass('has-readmore').attr('aria-expanded', false).attr('id', token);
+            $el.data('px-readmore-max', conHeight);
+            $el.addClass('has-px-readmore').attr('aria-expanded', false).attr('id', token);
             $el.wrapInner(function() {
-                return '<div class="' + settings.helperConClasses + '"></div>';
+                return '<div class="' + settings.helperConClasses + '" style="height: ' + settings.maxHeight + 'px"></div>';
             });
 
             $el.append(

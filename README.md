@@ -4,7 +4,7 @@ Just another jQuery Readmore plugin.
 
 ## How to use?
 ```html
-<article data-readmore="Read more" data-readmore-less="Read less">
+<article data-readmore-max-height="200" data-readmore="Read more" data-readmore-less="Read less">
 ...
 </article>
 ```

@@ -2,21 +2,14 @@
 // px Readmore
 // --------------------------------------------------
 
-.has-readmore {
+.has-px-readmore {
     overflow: hidden;
 }
 
 .px-readmore-helper {
     position: relative;
-    max-height: 200px;
-    transition: max-height .25s;
     overflow: hidden;
     z-index: 0;
-
-    .open > & {
-        max-height: 2000px;
-        transition: max-height 2s;
-    }
 }
 
 .px-readmore-toggle {
@@ -25,6 +18,7 @@
     padding-top: 10px;
     background-color: #fff;
     box-shadow: 0 -5px 18px 13px #fff;
+    transition: box-shadow .25s;
     z-index: 1;
 
     .open > & {

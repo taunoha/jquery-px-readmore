@@ -35,13 +35,13 @@
         return this.each(function() {
             var $el = $(this);
             var token = 'px-' + Math.random().toString(36).substr(2);
-            var conHeight = $el.height();
+            var contentHeight = $el.height();
             var maxHeight = $el.data('readmore-max-height') || settings.maxHeight;
 
-            if (conHeight < maxHeight)
+            if (contentHeight < maxHeight)
                 return;
 
-            $el.data('readmore-content-height', conHeight);
+            $el.data('readmore-content-height', contentHeight);
             $el.addClass('has-px-readmore').attr('aria-expanded', false).attr('id', token);
             $el.wrapInner(function() {
                 return '<div class="' + settings.helperConClasses + '" style="height: ' + maxHeight + 'px"></div>';

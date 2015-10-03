@@ -1,0 +1,26 @@
+.has-px-readmore {
+  overflow: hidden; }
+
+.px-readmore-helper {
+  position: relative;
+  overflow: hidden;
+  z-index: 0; }
+
+.px-readmore-toggle {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+  background-color: #fff;
+  box-shadow: 0 -5px 18px 13px #fff;
+  transition: box-shadow .25s;
+  z-index: 1; }
+  .open > .px-readmore-toggle {
+    box-shadow: none; }
+
+.px-readmore-was-open,
+.px-readmore-is-open {
+  position: relative;
+  box-shadow: 0 0 2px rgba(102, 175, 233, 0.95);
+  z-index: 1; }
+
+/*# sourceMappingURL=px.readmore.css.map */
